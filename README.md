@@ -7,7 +7,7 @@ and if that is true the npm module will get published and git source will get ta
 
 ## Dependencies
 
-> [npm-deployer-git-tagger](https://www.npmjs.com/package/tfx-cli)
+> [npm-deployer-git-tagger](https://github.com/kjrb/npm-deployer-git-tagger)
 
 # How to install
 
@@ -15,7 +15,7 @@ If you haven't done so yet:
 * [install TFS Extensions Command Line Utility: npm install -g tfx-cli](https://www.npmjs.com/package/tfx-cli)
 * [clone this source from git](https://github.com/kjrb/tfs-build-npm-deployer)
 
-Then execute:_~$ tfx build tasks upload ./lib from a root folder_
+Then execute:_~$ tfx build tasks upload ./lib from a root folder of the cloned repo_ 
 
 Navigate to TFS and you should see npm deployer and git tagger in available build steps.
 
