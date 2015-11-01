@@ -1,0 +1,59 @@
+{
+  "id": "b7144cd0-7817-11e5-843b-351c3660c8d1",
+  "name": "NpmDeployerAndGitTagger",
+  "friendlyName": "npm deployer and git tagger",
+  "description": "Deploys to Npm and Creates Git Tag",
+  "author": "KJRB",
+  "helpMarkDown": "Publishes to npm and taggs commit with version number",
+  "category": "Deploy",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": ["npm"],
+  "version": {
+    "Major": "0",
+    "Minor": "3",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.83.0",
+  "groups": [
+        {
+            "name":"advanced",
+            "displayName":"Advanced",
+            "isExpanded":false
+        }
+  ],    
+  "instanceNameFormat": "npm deployer and git tagger",
+  "inputs": [
+    {
+      "name": "cwd",
+      "type": "filePath",
+      "label": "Working Directory",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Not Used! - Current working directory when Npm Deployer and Git Tagger is run.",
+      "groupName":"advanced"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "label": "Message",
+      "defaultValue": "Running Npm Deployer and Git Tagger",
+      "required": true,
+      "helpMarkDown": "Message to echo out",
+      "groupName":"advanced"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "npmdeployer.js",
+      "argumentFormat": ""
+    },
+    "PowerShell": {
+      "target": "$(currentDirectory)\\NpmDeployer.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(cwd)"
+    }
+  }
+}
