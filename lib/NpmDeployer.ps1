@@ -1,16 +1,17 @@
 param (
     [string]$cwd,
+    [string]$packageSource,
     [string]$msg
 )
 
 Write-Verbose "Entering script $MyInvocation.MyCommand.Name"
 Write-Verbose "cwd = $cwd" -Verbose
+Write-Verbose "cwd = $packageSource" -Verbose
 Write-Verbose "msg = $msg" -Verbose
 
     
 $npm = Get-Command -Name npm -ErrorAction Ignore  
 
-$npmDeployerGitTaggerPackageSource = "https://github.com/kjrb/npm-deployer-git-tagger"
 $npmDeployerGitTaggerPackageName = "npm-deployer-git-tagger"
 
 import-module "Microsoft.TeamFoundation.DistributedTask.Task.Common"
@@ -39,9 +40,9 @@ Set-Location $cwd
 
 Write-Host $msg
 
-if ($npmDeployerGitTaggerPackageSource) {
+if ($packageSource) {
 
-    $npmArgs = " install " + $npmDeployerGitTaggerPackageSource
+    $npmArgs = " install " + $packageSource
 }
 else {
      $npmArgs = " install " + $npmDeployerGitTaggerPackageName

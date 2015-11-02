@@ -13,7 +13,7 @@
   "demands": ["npm"],
   "version": {
     "Major": "0",
-    "Minor": "4",
+    "Minor": "5",
     "Patch": "0"
   },
   "minimumAgentVersion": "1.83.0",
@@ -43,7 +43,16 @@
       "required": true,
       "helpMarkDown": "Message to echo out",
       "groupName":"advanced"
-    }
+    },
+     {
+      "name": "packageSource",
+      "type": "string",
+      "label": "Package Source",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Enter valid package source location for npm-deployer-git-tagger",
+      "groupName":"advanced"
+    },
   ],
   "execution": {
     "Node": {
