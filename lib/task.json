@@ -52,7 +52,7 @@
       "required": false,
       "helpMarkDown": "Enter valid package source location for npm-deployer-git-tagger",
       "groupName":"advanced"
-    },
+    }
   ],
   "execution": {
     "Node": {
