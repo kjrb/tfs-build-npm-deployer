@@ -20,3 +20,5 @@ Then execute:_~$ tfx build tasks upload ./lib from a root folder of the cloned r
 Navigate to TFS and you should see npm deployer and git tagger in available build steps.
 
 ### You should be able to use it now in your builds.
+
+[Read more] (http://sim4all.com/blogging/?p=520)
